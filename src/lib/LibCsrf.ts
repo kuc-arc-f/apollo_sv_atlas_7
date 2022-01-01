@@ -77,7 +77,7 @@ console.log(item);
       return ret;
     } catch (err) {
       console.error(err);
-      throw new Error('Error getToken : ' + err);
+      throw new Error('Error validToken : ' + err);
     }          
   },           
 }

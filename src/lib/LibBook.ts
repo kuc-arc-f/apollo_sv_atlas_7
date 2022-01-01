@@ -11,7 +11,8 @@ export default {
       const dbName = LibMongo.get_db_name();
 //console.log(d);
       const collection = client.db(dbName).collection("books");
-      let items = await collection.find({}).toArray();
+//      let items = await collection.find({}).toArray();
+      let items = await collection.find({}).sort({created_at: -1}).toArray();
       items = LibApiFind.convertItems(items);
 //console.log( items);
       client.close();             
